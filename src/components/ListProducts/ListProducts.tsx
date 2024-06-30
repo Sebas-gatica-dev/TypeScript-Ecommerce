@@ -4,6 +4,10 @@ import { CartContext } from '../../context/CartContext';
 import useFetch from '../../hooks/useFetch';
 import { ProductItem } from '../../types/typeApp';
 import Product from './Product/Product';
+import { Container } from 'react-bootstrap';
+
+import './style.css'
+import CustomSpinner from '../spinners/customSpinner';
 
 const ListProducts = () => {
 
@@ -19,11 +23,12 @@ const ListProducts = () => {
         });
     }
 
-    if(isLoading) return <h1>Cargando...</h1>
+    if(isLoading) return <CustomSpinner />
 
     return (
         <>
-            {
+        <Container className="mt-3 product-list">
+        {
                 products.map(product => (
                     <Product 
                         key={product.id}
@@ -31,6 +36,8 @@ const ListProducts = () => {
                         handleAddToCart={handleAddToCart}/>
                 ))
             }
+        </Container>
+         
         </>
     )
 }

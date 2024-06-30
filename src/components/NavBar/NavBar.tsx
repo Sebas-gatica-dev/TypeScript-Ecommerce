@@ -24,7 +24,11 @@ const NavBar = ({ handleOpen }: Props) => {
                 <Nav className="mr-auto">
                     <Link className='nav-link' to="/">Home</Link>
                 </Nav>
+                <Nav className="mr-auto">
+                    <Link className='nav-link' to="/product-list">Products</Link>
+                </Nav>
             </Navbar.Collapse>
+          
             <FontAwesomeIcon 
                 icon={faShoppingCart}
                 color='white'

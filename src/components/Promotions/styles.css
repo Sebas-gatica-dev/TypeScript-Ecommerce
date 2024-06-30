@@ -1,0 +1,16 @@
+.promotions {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.promotions h2 {
+  margin-bottom: 30px;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
